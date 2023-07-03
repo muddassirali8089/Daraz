@@ -1,0 +1,60 @@
+#logo-image {
+
+    width: 5vw;
+
+    
+  }
+  #logo-image2 {
+
+    width: 5vw;
+
+    
+  }
+  #button_app{
+
+    width: 13vw;
+  }
+ 
+.navbar2 {
+  background-color: white !important;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+ 
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  #logo-image{
+    display: none;
+  }
+  .navbar2 {
+    background-color: white !important;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+   
+    padding: 0px !important;
+    justify-content: space-between !important;
+   
+   
+   
+    padding: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .search{
+    margin-left: -2vw;
+  }
+  #logo-image2{
+    width: 8vw;
+  }
+  #button_app{
+    width: 24vw;
+  }
+  .navbar-brand{
+    margin: 0px !important;
+  }
+  
+}
+

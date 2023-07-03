@@ -1,0 +1,35 @@
+.nav-link{
+  text-transform: uppercase;
+  font-size: small;
+}
+
+
+
+
+
+
+
+
+#my-nav_link{
+  color: orangered;
+}
+#my-nav_link:hover {
+  /* CSS properties for hover effect */
+  color: orangered;
+  
+  
+  text-decoration: underline;
+}
+ 
+
+body{
+  background-color: #f5f5f5;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+
+  .navbar{
+    padding: 0px !important;
+  }
+ 
+}

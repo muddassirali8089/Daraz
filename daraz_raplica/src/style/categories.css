@@ -1,0 +1,35 @@
+
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .category {
+    font-weight: 600;
+    color: black;
+    font-size: 0.95rem;
+    background-color: white;
+    border-radius: 100px;
+    flex: 0.18;
+    padding: 0.2rem 0.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .category:hover {
+    -webkit-box-shadow: 0px 5px 14px -5px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 5px 14px -5px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 5px 14px -5px rgba(0, 0, 0, 0.46);
+  }
+  
+  .category > img {
+    object-fit: contain;
+    width: 2rem;
+  }
+  .category > div {
+    flex: 0.9;
+  }
+  
