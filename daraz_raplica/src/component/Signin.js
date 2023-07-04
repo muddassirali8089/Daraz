@@ -11,6 +11,7 @@ import {
   MDBCheckbox,
   // Import other components here
 } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 function Signin() {
   return (
@@ -31,7 +32,7 @@ function Signin() {
                 <a href="#" className="text-decoration-none">Forgot Password?</a>
               </div>
               <div className="text-center mt-3">
-                <p>Not a member? <a href="#!" className="text-decoration-none">Register</a></p>
+                <p>Not a member? <Link to={"/Registration"} href="#!" className="text-decoration-none">Register</Link></p>
                 <p>or sign up with:</p>
               </div>
               <hr className="my-1" />
