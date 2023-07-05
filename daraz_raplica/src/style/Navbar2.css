@@ -14,6 +14,20 @@
 
     width: 13vw;
   }
+  .navbar-link-custom {
+    font-size: 3vw;
+    padding: 0px !important;
+    
+  }
+  .cart-icon {
+    color: black;
+    padding: 0px !important;
+  }
+.cart-count{
+  color: black;
+  font-size: 1.3vw;
+}  
+  
  
 .navbar2 {
   background-color: white !important;
@@ -46,9 +60,7 @@
   .search{
     margin-left: -2vw;
   }
-  #logo-image2{
-    width: 8vw;
-  }
+ 
   #button_app{
     width: 24vw;
   }

@@ -12,65 +12,75 @@ import {
 const Cards = () => {
   const cardData = [
     {
-      imageSrc: 'https://mdbootstrap.com/img/new/standard/city/041.webp',
-      title: 'Card title 1',
-      text: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+      imageSrc: 'https://static-01.daraz.pk/p/31d271867193e06a03034456d8dd8eea.jpg',
+      title: 'RS.672',
+      text: '22mm Silicone Band for All Galaxy Watches Sports Strap Compatible With Only (22mm)'
     },
     {
-      imageSrc: 'https://mdbootstrap.com/img/new/standard/city/041.webp',
-      title: 'Card title 1',
-      text: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+      imageSrc: 'https://static-01.daraz.pk/p/205c487f152be28676e07cc4a843b592.jpg',
+      title: 'RS.672',
+      text: 'Super Woman Workout Cape | - Black | shawls for women Warm cape shawls women'
     },
     {
-      imageSrc: 'https://mdbootstrap.com/img/new/standard/city/041.webp',
-      title: 'Card title 1',
-      text: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+      imageSrc: 'https://static-01.daraz.pk/p/2ae48e3816953ee26a56cb9eadf59368.jpg',
+      title: 'RS.672',
+      text: 'Baby Wipes Sensitive Baby Wipes (5 Packs) (70 Wet Sheets Each)'
     },
     {
-      imageSrc: 'https://mdbootstrap.com/img/new/standard/city/041.webp',
-      title: 'Card title 1',
-      text: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+      imageSrc: 'https://static-01.daraz.pk/p/49c722b41afb3f451586c9d6d17134aa.jpg',
+      title: 'RS.672',
+      text: 'Silicone Rubber Case for Tronsmart Onyx Ace Earbuds – Black (Earbuds not Included)'
     },
     {
-      imageSrc: 'https://mdbootstrap.com/img/new/standard/city/041.webp',
-      title: 'Card title 1',
-      text: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+      imageSrc: 'https://static-01.daraz.pk/p/808168e2570f724214cfd596a6fb6589.jpg',
+      title: 'RS.672',
+      text: 'Saeed Ghani Sunblock SPF 60 with Vitamin C'
     },
     {
-      imageSrc: 'https://mdbootstrap.com/img/new/standard/city/041.webp',
-      title: 'Card title 1',
-      text: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+      imageSrc: 'https://static-01.daraz.pk/p/9e7d7d43478d1a30bf9d3c00bf2c0714.jpg',
+      title: 'RS.672',
+      text: 'Soft-Creme Cotton Baby Wipes (5 Packs) (70 Wet Sheets Each)'
     },
-    {
-      imageSrc: 'https://gcp-img.slatic.net/lazada/298b1220-df61-4c09-9ffa-b8f533e9217e_PK-1920-300.png',
-      title: 'Card title 1',
-      text: 'This  natural lead-in to additional content. This content is a little bit longer.'
-    },
-    {
-      imageSrc: 'https://gcp-img.slatic.net/lazada/298b1220-df61-4c09-9ffa-b8f533e9217e_PK-1920-300.png',
-      title: 'Card title 1',
-      text: 'This is  content. This content is a little bit longer.'
-    },
-    // Add more card objects as needed
   ];
 
   return (
-    <div className="container-fluid">
-      <MDBRow className="row-cols-2  row-cols-sm-3 row-cols-md-4 row-cols-xl-6 g-0">
+    <div className="container-fluid" style={{ width: '90%', backgroundColor: 'white' }}>
+      <MDBRow className="row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-6 g-0">
         {cardData.map((card, index) => (
-          <MDBCol key={index} style={{ padding: '0' }}>
+          <MDBCol key={index} style={{ padding: '10px' }}>
             <MDBCard className="h-100">
-              <div style={{ position: 'relative', paddingBottom: '100%', overflow: 'hidden' }}>
+              <div style={{ position: 'relative', paddingBottom: '100%', overflow: 'hidden', maxHeight: '100%' }}>
                 <MDBCardImage
                   src={card.imageSrc}
                   alt="..."
                   position="top"
-                  style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{
+                    position: 'absolute',
+                    top: '0',
+                    left: '0',
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
+                  className="img-fluid"
                 />
               </div>
               <MDBCardBody>
-                <MDBCardTitle>{card.title}</MDBCardTitle>
-                <MDBCardText>{card.text}</MDBCardText>
+                <div
+                  className="card-text"
+                  style={{
+                    maxHeight: '2.8em',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {card.text}
+                </div>
+                <MDBCardTitle style={{ color: 'orange' }}>{card.title}</MDBCardTitle>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
@@ -78,6 +88,6 @@ const Cards = () => {
       </MDBRow>
     </div>
   );
-}
+};
 
 export default Cards;

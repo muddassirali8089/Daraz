@@ -2,7 +2,15 @@ import React from 'react';
 import '../style/Navbar2.css';
 import { Dropdown } from 'bootstrap';
 import Catogry from './Catogry';
-
+import {
+  MDBNavbar,
+  MDBContainer,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBBadge
+} from 'mdb-react-ui-kit';
 
 const Navbar2 = () => {
 
@@ -37,16 +45,14 @@ const Navbar2 = () => {
           </button>
         </form>
 
-        <a className="navbar-brand">
-          <div>
-            <img
-              id="logo-image2"
-              src={require("../images/daraz_logo.png")}
-              className="img-fluid"
-              alt="Daraz Logo"
-            />
-          </div>
-        </a>
+        <MDBNavbarLink href='#' className='navbar-link-custom'>
+  <MDBBadge pill color='light' className='cart-count' >10</MDBBadge>
+  <span>
+    <MDBIcon fas icon='shopping-cart' className='cart-icon'></MDBIcon>
+  </span>
+</MDBNavbarLink>
+
+
 
         <a className="navbar-brand">
           <div>
