@@ -1,0 +1,14 @@
+.text-reset:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .Footer_background{
+    background: #2e2e54 !important;
+    
+    
+  }
+  .text-center{
+ color: #fff;
+ font-weight: 700;
+  }
+  

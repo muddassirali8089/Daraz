@@ -3,6 +3,9 @@ import '../style/Navbar2.css';
 import { Dropdown } from 'bootstrap';
 import Catogry from './Catogry';
 import {
+  MDBInputGroup,
+  MDBInput, 
+  MDBBtn,
   MDBNavbar,
   MDBContainer,
   MDBIcon,
@@ -29,7 +32,8 @@ const Navbar2 = () => {
           </div>
         </a>
 
-        <form className="form-inline">
+         <form className="form-inline">
+
           <input
             style={{ width: "40vw" }}
             className="form-control mr-sm-2 lzd-nav-cart search"
@@ -37,13 +41,17 @@ const Navbar2 = () => {
             placeholder="Search"
             aria-label="Search"
           />
-          <button
-            className="btn btn-outline-success my-2 my-sm-0 ml-auto search"
-            type="submit"
-          >
+          <MDBBtn rippleColor='dark'>
+        <MDBIcon icon='search' />
+      </MDBBtn>
+          {/* // <button
+          //   className="btn btn-outline-success my-2 my-sm-0 ml-auto search"
+          //   type="submit"
+          // >
             Search
-          </button>
-        </form>
+          </button> */}
+        </form> 
+        
 
         <MDBNavbarLink href='#' className='navbar-link-custom'>
   <MDBBadge pill color='light' className='cart-count' >10</MDBBadge>

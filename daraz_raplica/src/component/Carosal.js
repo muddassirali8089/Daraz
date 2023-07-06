@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Carosal = () => {
@@ -17,7 +18,7 @@ const Carosal = () => {
             className="d-block w-100"
             alt="..."
             style={{
-              height: "300px",
+              height: "400px",
               justifyContent: "center",
               objectFit: "cover",
             }}
@@ -35,7 +36,7 @@ const Carosal = () => {
             className="d-block w-100"
             alt="..."
             style={{
-              height: "300px",
+              height: "400px",
               justifyContent: "center",
               objectFit: "cover",
             }}
@@ -49,11 +50,11 @@ const Carosal = () => {
         </div>
         <div className="carousel-item">
           <img
-            src="https://gcp-img.slatic.net/lazada/e9ef6d19-ba54-4ab3-adcc-c6db4e4dd41e_PK-1920-300.png"
+            src="https://icms-image.slatic.net/images/ims-web/cf07e1fa-e3ec-4c2d-a1eb-aea1a2e6a34e.jpg"
             className="d-block w-100"
             alt="..."
             style={{
-              height: "300px",
+              height: "400px",
               justifyContent: "center",
               objectFit: "cover",
             }}
