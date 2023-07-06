@@ -5,7 +5,8 @@ import Carosal from "./component/Carosal";
 import Signin from "./component/Signin";
 import Registration from "./component/Registration";
 import Cards from "./component/Cards";
-import Footer from "./component/Footer"
+import Footer from "./component/Footer";
+import Footer2 from "./component/Footer2"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
       <Navbar />
       <Navbar2 />
       <Routes>
-        <Route path="/" element={<div> <Carosal/> <Cards /> <Footer /> </div>} />
+        <Route path="/" element={<div> <Carosal/> <Cards /> <Footer2 /> <Footer /> </div>} />
         <Route path="/Signin" element={<Signin />} />
         <Route path="/Registration" element={<Registration />} />
         
       </Routes>
+     
     </div>
   );
 }

@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MDBCard,
   MDBCardImage,
   MDBCardBody,
   MDBCardTitle,
-  MDBCardText,
   MDBRow,
-  MDBCol
+  MDBCol , 
+  MDBContainer
 } from 'mdb-react-ui-kit';
+
 
 const Cards = () => {
   const cardData = [
@@ -43,9 +44,53 @@ const Cards = () => {
     },
   ];
 
+  const DigitalWatch = () => {
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(30);
+    const [seconds, setSeconds] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        if (hours === 0 && minutes === 0 && seconds === 0) {
+          clearInterval(interval);
+        } else {
+          if (minutes === 0 && seconds === 0) {
+            setHours((prevHours) => prevHours - 1);
+            setMinutes(59);
+            setSeconds(59);
+          } else if (seconds === 0) {
+            setMinutes((prevMinutes) => prevMinutes - 1);
+            setSeconds(59);
+          } else {
+            setSeconds((prevSeconds) => prevSeconds - 1);
+          }
+        }
+      }, 1000);
+  
+      return () => {
+        clearInterval(interval);
+      };
+    }, [hours, minutes, seconds]);
+  
+    return (
+      <div>
+        <h1>{`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}</h1>
+      </div>
+    );
+  };
+
   return (
     <div className="container-fluid" style={{ width: '90%', backgroundColor: 'white' }}>
-      <MDBRow className="row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-6 g-0">
+    
+    <div className='row border-bottom'>
+  <div className='col-6 d-flex align-items-center '>
+    <p className="m-0 me-2">On Sale Now</p> 
+   < p className="m-0 me-2 ml-5" >  <DigitalWatch /> </p> 
+  </div>
+</div>
+
+      <MDBRow className="row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-xl-6 g-0">
+        
         {cardData.map((card, index) => (
           <MDBCol key={index} style={{ padding: '10px' }}>
             <MDBCard className="h-100">
@@ -66,7 +111,7 @@ const Cards = () => {
                 />
               </div>
               <MDBCardBody>
-                <div
+                <p
                   className="card-text"
                   style={{
                     maxHeight: '2.8em',
@@ -76,10 +121,11 @@ const Cards = () => {
                     WebkitLineClamp: 2,
                     WebkitBoxOrient: 'vertical',
                     fontWeight: 'bold',
+                    whiteSpace: 'nowrap', // Add this line to make the text appear in a single line
                   }}
                 >
                   {card.text}
-                </div>
+                </p>
                 <MDBCardTitle style={{ color: 'orange' }}>{card.title}</MDBCardTitle>
               </MDBCardBody>
             </MDBCard>
