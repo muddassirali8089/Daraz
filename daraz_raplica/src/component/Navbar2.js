@@ -19,7 +19,7 @@ const Navbar2 = () => {
 
 
   return (
-    <div className="navbar2 pt-sm-3">
+    <div className="navbar2 ">
       <nav className="navbar navbar2 navbar-light bg-light justify-content-lg-between">
         <a className="navbar-brand">
           <div>
@@ -62,7 +62,7 @@ const Navbar2 = () => {
 
 
 
-        <a className="navbar-brand">
+        {/* <a className="navbar-brand">
           <div>
             <img
               id="button_app"
@@ -71,7 +71,15 @@ const Navbar2 = () => {
               alt="Daraz Logo"
             />
           </div>
-        </a>
+        </a> */}
+        <div className="user-picture">
+          <img
+            src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
+            className="rounded-circle user-picture-img"
+            height="30"
+            alt="User Picture"
+          />
+        </div>
       </nav>
 
       <Catogry />

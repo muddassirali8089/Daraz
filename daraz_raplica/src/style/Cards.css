@@ -22,3 +22,20 @@
     transform: scale(1.1);
   }
   
+
+
+
+
+  /* custom.css */
+ 
+  
+  .card-hover-effect:hover {
+    transform: scale(1); /* Increased size on hover (zoom-in effect) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom-card {
+    border: none ;
+  }
+  
+
