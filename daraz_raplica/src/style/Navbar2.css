@@ -1,10 +1,43 @@
+
+.navbar_2{
+ 
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  overflow: hidden;
+ 
+}
 #logo-image {
 
-    width: 5vw;
+    width: 9vw;
+    height: auto;
 
-    
   }
-  #logo-image2 {
+
+
+  @media (min-width: 320px) and (max-width: 576px) {
+
+
+    #logo-image {
+
+      width: 80px;
+  
+      
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+
+
+    #logo-image {
+
+      width: 80px;
+  
+      
+    }
+  }
+  /* #logo-image2 {
 
     width: 5vw;
 
@@ -29,13 +62,7 @@
 }  
   
  
-.navbar2 {
-  background-color: white !important;
-  position: sticky;
-  top: 0;
-  z-index: 999;
- 
-}
+
 
 @media (min-width: 320px) and (max-width: 576px) {
   #logo-image{
@@ -69,4 +96,4 @@
   }
   
 }
-
+ */

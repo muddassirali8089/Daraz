@@ -9,7 +9,7 @@ const Footer = () => {
       
   
         <section className=''>
-          <MDBContainer className='text-center text-md-start '>
+          <MDBContainer className='text-center footer_text text-md-start '>
             <MDBRow className='mt-3'>
               <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4 mt-4'>
                 <h6 className='text-uppercase fw-bold mb-4'>
@@ -90,8 +90,8 @@ const Footer = () => {
             </MDBRow>
           </MDBContainer>
         </section>
-        <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom text-center'>
-          <div className='me-5 d-none d-lg-block'>
+        <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom text-center footer_text'>
+          <div className='me-5 d-none d-lg-block '>
             <span>Get connected with us on social networks:</span>
           </div>
   
@@ -116,7 +116,7 @@ const Footer = () => {
             </a>
           </div>
         </section>
-         <div className='text-center p-4' >
+         <div className='text-center footer_text  p-4' >
           © 2021 Copyright:
           <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
             MDBootstrap.com
