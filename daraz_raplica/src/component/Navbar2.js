@@ -48,12 +48,12 @@ const Navbar2 = () => {
         </a>
    </div>
 
-   <div className='col-sm-6 d-flex align-items-center justify-content-center' style={{ border: "2px solid black" }}>
+   <div className='col-sm-5 d-flex align-items-center justify-content-center' >
   <div className='input-group md-form form-sm form-2 pl-0 text-center '>
     <input
 
-    style={{height: "50px" }}
-      className='form-control my-0 py-1 amber-border '
+    
+      className='form-control my-0 py-1 amber-border search_input '
       type='search'
      
       placeholder='Search in Daraz'
@@ -62,23 +62,26 @@ const Navbar2 = () => {
       aria-label='Search'
       required
     />
-      <MDBBtn className='amber accent-4' style={{width: "50px"}}>
-          <MDBIcon icon='search' className='text-white' />
-        </MDBBtn>
+     <MDBBtn className='amber accent-4 custom-button'>
+  <MDBIcon icon='search my_search ' className='text-white search_icon' />
+</MDBBtn>
+
+
+
   </div>
 </div>
-<div className='col-sm-3 d-flex align-items-center justify-content-between '>
-  <div>
-    
-      <ShoppingCartOutlined style={{ fontSize: '45px' }} />
-   
-    <img
-      id="logo-image"
-      src="https://icms-image.slatic.net/images/ims-web/7a379e2e-4b65-4617-9188-94e0c768cd9d.png"
-      alt=""
-    />
-  </div>
+<div className='col-sm-4 d-flex justify-content-center justify-content-sm-between align-items-center '>
+  <ShoppingCartOutlined className='shoping_cart ' />
+  <img
+  
+    id="logo-image2"
+    src="https://icms-image.slatic.net/images/ims-web/7a379e2e-4b65-4617-9188-94e0c768cd9d.png"
+    alt=""
+  />
 </div>
+
+
+
 
 
        </div>

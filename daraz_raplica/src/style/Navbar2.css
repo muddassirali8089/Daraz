@@ -16,84 +16,121 @@
   }
 
 
-  @media (min-width: 320px) and (max-width: 576px) {
+  #logo-image2 {
 
-
-    #logo-image {
-
-      width: 80px;
-  
-      
-    }
-  }
-
-  @media (min-width: 577px) and (max-width: 768px) {
-
-
-    #logo-image {
-
-      width: 80px;
-  
-      
-    }
-  }
-  /* #logo-image2 {
-
-    width: 5vw;
-
-    
-  }
-  #button_app{
-
-    width: 13vw;
-  }
-  .navbar-link-custom {
-    font-size: 3vw;
-    padding: 0px !important;
-    
-  }
-  .cart-icon {
-    color: black;
-    padding: 0px !important;
-  }
-.cart-count{
-  color: black;
-  font-size: 1.3vw;
-}  
-  
- 
-
-
-@media (min-width: 320px) and (max-width: 576px) {
-  #logo-image{
-    display: none;
-  }
-  .navbar2 {
-    background-color: white !important;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    width: 220px;
    
-    padding: 0px !important;
-    justify-content: space-between !important;
-   
-   
-   
-    padding: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+    margin-right: 4vw;
   }
-  .search{
-    margin-left: -2vw;
-  }
- 
-  #button_app{
-    width: 24vw;
-  }
-  .navbar-brand{
-    margin: 0px !important;
-  }
+.search_input{
+  height: 50px;
+}
+
+.search_icon{
+  height: 30px;
   
 }
- */
+
+.my_search{
+
+  padding-top: 7px;
+}
+  .shoping_cart{
+    font-size: 50px;
+  }
+
+  
+  @media (min-width: 1200px) and (max-width: 1400px) {
+
+    #logo-image2 {
+
+      width: 200px;
+     margin-right: 4vw;
+    
+    }
+
+    .shoping_cart{
+      font-size: 35px;
+    }
+    
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #logo-image2 {
+
+      width: 150px;
+     margin-right: 4vw;
+    
+    }
+
+    .shoping_cart{
+      font-size: 30px;
+    }
+
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #logo-image2 {
+
+      width: 120px;
+     margin-right: 4vw;
+    
+    }
+
+    .shoping_cart{
+      font-size: 35px;
+    }
+
+  }
+  @media (min-width: 576px) and (max-width: 768px) {
+    #logo-image2 {
+
+      width: 110px;
+      
+     margin-right: 2vw;
+    
+    }
+
+
+    .shoping_cart{
+      font-size: 25px;
+    }
+
+    
+
+
+    
+  }
+  @media (min-width: 320px) and (max-width: 575px) {
+
+
+    #logo-image {
+
+      width: 90px;
+      
+    
+    
+    }
+    #logo-image2 {
+padding-top: 5px;
+padding-bottom: 5px;
+    width: 120px;
+      
+     margin-right: 10vw;
+    
+    }
+
+
+    .shoping_cart{
+      font-size: 30px;
+      margin-left: 10vw;
+
+    }
+
+    .search_input{
+      width: 150px;
+    }
+}
+
+
+
