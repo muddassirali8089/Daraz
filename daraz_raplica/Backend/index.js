@@ -1,7 +1,8 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import bodyParser from "body-parser";
+import RegisterUser from "./routes/RegisterUser.js"
 
 const app = express();
 
@@ -19,3 +20,5 @@ app.listen(5000);
 app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/Registration" , RegisterUser);

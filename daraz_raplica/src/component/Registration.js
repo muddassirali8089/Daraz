@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import { registerUser } from '../Service/AddpersonApi';
 
 import { RegistrationSchema } from '../Schamas/RegistrationSchema';
 import {
@@ -27,10 +28,17 @@ function Registration() {
       gender: 'male',
     },
 
-    validationSchema: RegistrationSchema,
-    onSubmit: (values) => {
-    
-      console.log(values);
+     validationSchema: RegistrationSchema,
+
+    onSubmit:  async (values) => {
+      console.log("onsubmit function call");
+      console.log(values.fullName);    
+      try {
+        const response = await registerUser(values); // Call the registerUser function
+        console.log('Registration successful!', response);
+      } catch (error) {
+        console.error('Error registering:', error);
+      }
     },
   });
 
@@ -196,8 +204,8 @@ function Registration() {
 
 
 
-<div className='text-center'> {/* Add the text-center class here */}
-  <MDBBtn className='text-center' size='sm' type='submit' disabled={!isFormValid}>
+<div className='text-center'> 
+  <MDBBtn className='text-center' size='sm' type='submit' disabled={!isFormValid} >
     Sign up
   </MDBBtn>
 </div>
