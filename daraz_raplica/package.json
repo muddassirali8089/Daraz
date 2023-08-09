@@ -13,10 +13,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
     "bootstrap": "^4.6.2",
+    "formik": "^2.4.3",
     "jquery": "^3.7.0",
     "mdb-react-ui-kit": "^6.1.0",
     "mdbreact": "^5.2.0",
+    "mongodb": "^5.7.0",
     "popper.js": "^1.16.1",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
@@ -27,7 +30,8 @@
     "react-router-dom": "^6.11.2",
     "react-scripts": "^5.0.1",
     "react-select": "^5.7.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

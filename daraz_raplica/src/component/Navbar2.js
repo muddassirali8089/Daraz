@@ -96,6 +96,10 @@ const Navbar2 = () => {
 };
 
 export default Navbar2;
+
+
+
+
 //     <div className="navbar2 ">
 //       <nav className="navbar navbar2 navbar-light bg-light justify-content-lg-between">
 //         <a className="navbar-brand">
