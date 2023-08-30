@@ -1,6 +1,8 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import { registerUser } from '../Service/AddpersonApi';
+import { useState } from 'react';
+import { useNavigation } from 'react-router-dom';
 
 import { RegistrationSchema } from '../Schamas/RegistrationSchema';
 import {
@@ -14,9 +16,11 @@ import {
   MDBIcon,
 } from 'mdb-react-ui-kit';
 
+
 function Registration() {
   const today = new Date().toISOString().split('T')[0];
 
+  const [registrationError, setRegistrationError] = useState(null); // State for error message
   const {
     values, errors, touched,   handleBlur, handleChange, handleSubmit, }  = useFormik({
     initialValues: {
@@ -30,17 +34,29 @@ function Registration() {
 
      validationSchema: RegistrationSchema,
 
-    onSubmit:  async (values) => {
-      console.log("onsubmit function call");
-      console.log(values.fullName);    
+     onSubmit: async (values, { resetForm }) => {
+      
+      
+    
       try {
-        const response = await registerUser(values); // Call the registerUser function
+        const response = await registerUser(values);
         console.log('Registration successful!', response);
+        
+        // Clear form fields upon successful registration
+        resetForm();
+
+        // Navigate to the homepage on successful registration
+        
       } catch (error) {
         console.error('Error registering:', error);
+
+        // Set the error message state
+        setRegistrationError('Registration failed. Please try again.');
       }
     },
   });
+    
+  
 
   
   const isFormValid = Object.keys(errors).length === 0 && Object.keys(touched).length > 0;
@@ -183,21 +199,7 @@ function Registration() {
       Female
     </label>
   </div>
-  <div className='form-check form-check-inline'>
-    <input
-      className='form-check-input'
-      type='radio'
-      name='gender'
-      id='other'
-      value='other'
-      onChange={handleChange}
-      onBlur={handleBlur}
-      checked={values.gender === 'other'}
-    />
-    <label className='form-check-label' htmlFor='other'>
-      Other
-    </label>
-  </div>
+ 
 </div>
 
 
@@ -205,6 +207,9 @@ function Registration() {
 
 
 <div className='text-center'> 
+
+  {/* Display error message if registrationError state is set */}
+  {registrationError && <p className='form-error'>{registrationError}</p>}
   <MDBBtn className='text-center' size='sm' type='submit' disabled={!isFormValid} >
     Sign up
   </MDBBtn>

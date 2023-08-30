@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const registrationSchema = new mongoose.Schema({
   fullName: {
@@ -21,11 +21,11 @@ const registrationSchema = new mongoose.Schema({
   },
   gender: {
     type: String,
-    enum: ['male', 'female', 'other'],
+    enum: ['male', 'female'],
     required: true,
   },
 });
 
-const RegisterUser = mongoose.model('RegisterUser', registrationSchema);
+const RegisterUserModel = mongoose.model('RegisterUser', registrationSchema);
 
-module.exports = RegisterUser;
+export default RegisterUserModel;

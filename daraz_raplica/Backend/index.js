@@ -1,24 +1,25 @@
 import express from "express";
-import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
-import RegisterUser from "./routes/RegisterUser.js"
+import RegisterUser from "./routes/RegisterUser.js";
+import connectDB from "./DatabaseConnection/Config.js";
+import dotenv from 'dotenv'; // Import dotenv to load environment variables
+
+dotenv.config(); // Load environment variables from .env file
 
 const app = express();
 
-mongoose.set('strictQuery', true);
+const port = process.env.PORT || 5000; // Use the PORT environment variable or default to 5000
 
-const url = "mongodb+srv://muddassirali8089:123@daraz.hda2o0g.mongodb.net/";
+// Connect to the database
+connectDB();
 
-mongoose.connect(url)
-  .then(() => console.log("connected."))
-  .catch(() => console.log("not... connected"))
-console.log("after....")
-
-app.listen(5000);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/Registration" , RegisterUser);
+app.use("/Registration", RegisterUser);
