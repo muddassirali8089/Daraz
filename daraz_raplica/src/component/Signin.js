@@ -11,11 +11,16 @@ import {
   MDBCheckbox,
 } from 'mdb-react-ui-kit';
 import * as Yup from "yup";
-import { Link } from 'react-router-dom';
+import { Link, json } from 'react-router-dom';
 import { loginUser } from "../Service/AuthuserApi";
 import { useFormik } from 'formik'; // Import useFormik
+import { useNavigate } from "react-router-dom"
 
 function Signin() {
+  const navigate = useNavigate();
+
+ 
+  
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -29,8 +34,12 @@ function Signin() {
       try {
         const userData = { email: values.email, password: values.password };
         const response = await loginUser(userData);
-        // Handle successful login (e.g., redirect to dashboard)
+        if (response){
+       console.log(response);
+        navigate(`/${response.fullName}`);
+        }
       } catch (error) {
+
         // Handle login error (e.g., display error message)
         console.error('Login error:', error);
       }
@@ -76,6 +85,7 @@ function Signin() {
                 <MDBBtn type="submit" size='sm' className='mb-1'> {/* Change to type="submit" */}
                   Login
                 </MDBBtn>
+                
               </form>
 
               <div className="text-center">

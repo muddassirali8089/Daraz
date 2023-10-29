@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../style/Navbar.css';
 
 const Navbar = () => {
+
   return (
     <div className='my_navbar'>
       <nav className="navbar navbar-expand-lg navbar-light bg-light pt-0 pb-0 ">
@@ -21,7 +22,7 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
             <li className="nav-item">
               <Link
-                to={'/'}
+                to={"/"}
                 className="nav-link"
                 id='my-nav_link'
                 data-toggle="collapse"

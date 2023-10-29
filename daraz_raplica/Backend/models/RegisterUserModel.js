@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
 const registrationSchema = new mongoose.Schema({
   fullName: {
@@ -25,6 +26,15 @@ const registrationSchema = new mongoose.Schema({
     required: true,
   },
 });
+
+
+registrationSchema.methods.comparePassword = async function(candidatePassword) {
+  try {
+    return await bcrypt.compare(candidatePassword, this.password);
+  } catch (error) {
+    throw error;
+  }
+};
 
 const RegisterUserModel = mongoose.model('RegisterUser', registrationSchema);
 
