@@ -14,13 +14,11 @@ import * as Yup from "yup";
 import { Link, json } from 'react-router-dom';
 import { loginUser } from "../Service/AuthuserApi";
 import { useFormik } from 'formik'; // Import useFormik
-import { useNavigate } from "react-router-dom"
+import { useNavigate , useParams } from "react-router-dom"
 
 function Signin() {
-  const navigate = useNavigate();
-
- 
   
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -34,9 +32,10 @@ function Signin() {
       try {
         const userData = { email: values.email, password: values.password };
         const response = await loginUser(userData);
+      
         if (response){
-       console.log(response);
-        navigate(`/${response.fullName}`);
+      
+        navigate("/");
         }
       } catch (error) {
 
@@ -82,7 +81,7 @@ function Signin() {
 
                 <MDBCheckbox name='flexCheck' id='flexCheckDefault' className='mb-1' label='Remember password' />
 
-                <MDBBtn type="submit" size='sm' className='mb-1'> {/* Change to type="submit" */}
+                <MDBBtn type="submit" size='sm' className='mb-1'>
                   Login
                 </MDBBtn>
                 
@@ -120,3 +119,4 @@ function Signin() {
 }
 
 export default Signin;
+

@@ -25,6 +25,7 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/Registration", RegisterUser);
+console.log("index...");
 
 // Login route
 app.use("/Signin", AuthRoute);

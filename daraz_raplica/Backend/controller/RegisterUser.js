@@ -1,9 +1,16 @@
 import bcrypt from 'bcrypt';
 import RegisterUserModel from '../models/RegisterUserModel.js';
+import  jwt  from 'jsonwebtoken';
+import dotenv from 'dotenv';
+
+// Load environment variables from .env file
+dotenv.config();
+
 
 export const setRegisterUser = async (req, res) => {
-  console.log("......");
+  
   const { fullName, email, password, birthdate, gender } = req.body;
+  
 
   try {
     // Check if user with the same email already exists
@@ -28,8 +35,16 @@ export const setRegisterUser = async (req, res) => {
     // Save the user to the database
     const savedUser = await newUser.save();
 
+
+    const secert_key = process.env.SECERT_KEY;
+    const token = jwt.sign({ userId: savedUser._id, email: savedUser.email }, secert_key  );
+      
+  
+    res.status(200).json({ token, user: savedUser });
+    console.log(token);
+
     res.json(savedUser);
   } catch (error) {
-    res.status(500).json({ error: 'Registration failed' });
+    res.status(500).send({ error });
   }
 };
