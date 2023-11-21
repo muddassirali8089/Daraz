@@ -4,9 +4,9 @@ import bodyParser from "body-parser";
 import RegisterUser from "./routes/RegisterUser.js";
 import connectDB from "./DatabaseConnection/Config.js";
 import dotenv from 'dotenv';
-
+// import authenticateToken from '../Middlewares/authenticateToken.js';
 import AuthRoute from './routes/AuthRoute.js'
-
+import authenticateToken from './Middlewares/authenticateToken.js';
 
 dotenv.config();
 
@@ -28,7 +28,7 @@ app.use("/Registration", RegisterUser);
 console.log("index...");
 
 // Login route
-app.use("/Signin", AuthRoute);
+app.use("/Signin", authenticateToken, AuthRoute);
 
 
 

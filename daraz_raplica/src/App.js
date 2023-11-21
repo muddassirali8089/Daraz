@@ -13,11 +13,6 @@ import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-
 
 function App() {
  
- 
-  
-
-
-  
   return (
     <div className="App">
       <Navbar />

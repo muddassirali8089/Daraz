@@ -1,7 +1,8 @@
 import  express  from "express";
 import { AuthController } from "../controller/AuthController.js";
 const router = express.Router();
-router.post("/" , AuthController)
+// import authenticateToken from "../Middlewares/authenticateToken"
+router.post("/" ,    AuthController)
 
 
 export default router;

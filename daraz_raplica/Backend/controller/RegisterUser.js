@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 
-export const setRegisterUser = async (req, res) => {
+export const setRegisterUser = async   (req, res) => {
   
   const { fullName, email, password, birthdate, gender } = req.body;
   
@@ -41,10 +41,13 @@ export const setRegisterUser = async (req, res) => {
       
   
     res.status(200).json({ token, user: savedUser });
-    console.log(token);
+    console.log(token, "mytoken");
+    console.log("response from backend...");
+    
+    
 
-    res.json(savedUser);
   } catch (error) {
-    res.status(500).send({ error });
+    console.log("error");
+     res.status(500).send({ error });
   }
 };

@@ -17,6 +17,7 @@
     MDBInput,
     MDBIcon,
   } from 'mdb-react-ui-kit';
+import { SoundTwoTone } from '@ant-design/icons';
 
 
 
@@ -47,7 +48,9 @@
         setRegistrationError(null);
         try {
           const response = await registerUser(values);
-  
+          console.log('API Response:', response.token);
+          const {token , user} = response;
+          console.log(token , "this is token... only");
           // Check if the response contains an error message
           if (response.message) {
             setRegistrationError(response.message);
