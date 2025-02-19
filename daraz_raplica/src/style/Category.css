@@ -1,0 +1,16 @@
+ 
+ 
+
+@media (min-width: 576px) {
+  .nested-dropdown{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid #ddd;
+    width: 200px;
+    z-index: 2;
+  }
+}
+
+

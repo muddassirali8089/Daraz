@@ -58,7 +58,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to={'/Signin'}
+                to={'/login'}
                 className="nav-link"
                 id='my-nav_link'
                 data-toggle="collapse"

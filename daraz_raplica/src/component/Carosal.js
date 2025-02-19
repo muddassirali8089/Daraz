@@ -1,11 +1,13 @@
-
 import React from 'react';
 
 const Carosal = () => {
-
-  
   return (
-    <div id="carouselExampleCaptions" className="carousel slide my_carosal w-100">
+    <div 
+      id="carouselExampleCaptions" 
+      className="carousel slide my_carosal w-100" 
+      data-ride="carousel" 
+      data-interval="2000" // 2 seconds interval between slides
+    >
       <ol className="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
